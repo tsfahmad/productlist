@@ -6,6 +6,8 @@ COPY . .
 
 ENV PUBLIC_URL https://microfrontends.herokuapp.com/products-list
 
+RUN npm install --only=dev
+RUN npm install
 RUN npm run build
 RUN npm run transpile
 
